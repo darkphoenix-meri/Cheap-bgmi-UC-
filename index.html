@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Cheap UC Store | BGMI UC Packs</title>
+  <meta name="description" content="Browse BGMI UC pack options at Cheap UC Store.">
+  <style>
+    :root{--bg:#0b0d12;--panel:#141821;--panel2:#1b212e;--line:#2b3445;--txt:#f4f6fa;--muted:#9aa5b5;--gold:#f5b301;--green:#22c55e;--red:#ef4444}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#3a290b 0,#11141c 38%,var(--bg) 75%);color:var(--txt);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:35px}
+    button,input{font:inherit}button{cursor:pointer}.nav{position:sticky;top:0;z-index:5;background:#0b0d12eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .navin,main{max-width:980px;margin:auto;padding:14px 18px}.navin{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:11px}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#ffd34e,#ff8a00);color:#111;font-weight:950}
+    h1{font-size:17px;line-height:1.2;margin:0}.sub{font-size:11px;color:var(--muted)}.tag{border:1px solid #5d4819;background:#241b0b;color:#ffd45a;border-radius:99px;padding:7px 11px;font-size:11px;font-weight:700}
+    .hero{text-align:center;padding:28px 0 20px}.hero h2{font-size:clamp(26px,5vw,38px);line-height:1.1;margin:0 0 10px}.hero p{color:var(--muted);margin:0}
+    .notice{border:1px solid #755b20;background:#2b210d;color:#ffe6a0;border-radius:12px;padding:12px 14px;font-size:13px;margin:0 0 20px}
+    .section{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:800;margin:22px 0 12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+    .pack{background:linear-gradient(160deg,#191f2b,#121721);border:1px solid var(--line);border-radius:15px;padding:16px 12px;text-align:center;position:relative;transition:.15s}
+    .pack:hover{transform:translateY(-2px);border-color:#657087}.pack.selected{border:1.5px solid var(--gold);background:#2a210d;box-shadow:0 0 0 1px #f5b30133}
+    .uc{font-size:21px;font-weight:900}.pack small{display:block;color:var(--muted)}.price{font-size:20px;font-weight:900;color:#fbd35b;margin-top:8px}.mrp{text-decoration:line-through;color:#778092;font-size:12px;margin-left:5px}
+    .layout{display:grid;grid-template-columns:1.15fr .85fr;gap:15px;margin-top:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px}
+    .card h3{font-size:16px;margin:0 0 14px}.field{margin-bottom:12px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:5px}.field input{width:100%;background:#0d1119;color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:11px;outline:none}.field input:focus{border-color:var(--gold)}
+    .modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}.mode{border:1px solid var(--line);background:#0d1119;color:var(--muted);border-radius:10px;padding:10px 6px;font-size:12px;font-weight:700}.mode.active{border-color:var(--gold);color:var(--gold);background:#2a210d}
+    .qty{display:flex;align-items:center;gap:12px;margin:14px 0}.qty button{width:32px;height:32px;border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:white;font-size:19px}.qty strong{min-width:20px;text-align:center}
+    .total{border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;align-items:center}.total strong{font-size:25px;color:#ffd45a}
+    .primary{width:100%;border:0;border-radius:999px;background:var(--gold);color:#17120a;padding:13px;font-weight:900;margin-top:14px}.primary:disabled{opacity:.45;cursor:not-allowed}
+    .muted{color:var(--muted);font-size:12px}.status{margin-top:12px;padding:11px;border-radius:10px;background:#0d1119;border:1px solid var(--line);font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}
+    .footer{text-align:center;color:var(--muted);font-size:11px;padding:25px 12px}
+    @media(max-width:700px){.layout{grid-template-columns:1fr}.navin,main{padding-left:14px;padding-right:14px}.tag{font-size:10px}}
+  </style>
+</head>
+<body>
+<header class="nav"><div class="navin">
+  <div class="brand"><div class="logo">UC</div><div><h1>Cheap UC Store</h1><div class="sub">BGMI UC pack catalogue</div></div></div>
+  <span class="tag">DEMO STORE</span>
+</div></header>
+<main>
+  <section class="hero"><h2>Choose your UC pack</h2><p>Clear pricing · Simple order summary · Mobile friendly</p></section>
+  <div class="notice"><strong>Demo mode:</strong> This build is prepared for Firebase Hosting, but it does not collect payments or confirm UC delivery. Connect an approved payment provider and a secure order backend before accepting real orders.</div>
+  <div class="section">Select a UC pack</div>
+  <section class="grid" id="packs" aria-label="UC packs"></section>
+  <section class="layout">
+    <div class="card">
+      <h3>Player & order details</h3>
+      <div class="modes">
+        <button class="mode active" data-mode="uid" type="button">Direct UID top-up</button>
+        <button class="mode" data-mode="voucher" type="button">Voucher code</button>
+      </div>
+      <div class="field" id="uidWrap"><label for="uid">BGMI Player UID</label><input id="uid" inputmode="numeric" maxlength="14" placeholder="Enter player UID"></div>
+      <div class="field"><label for="ign">In-game name (optional)</label><input id="ign" maxlength="30" placeholder="Player name"></div>
+      <div class="field"><label for="contact">Contact number (optional in demo)</label><input id="contact" inputmode="tel" maxlength="15" placeholder="WhatsApp number"></div>
+      <p class="muted">Never share your game password, OTP, or account login details.</p>
+    </div>
+    <aside class="card">
+      <h3>Order summary</h3>
+      <div id="selectedText">13 UC pack</div>
+      <div class="qty"><button id="minus" type="button" aria-label="Decrease quantity">−</button><strong id="qty">1</strong><button id="plus" type="button" aria-label="Increase quantity">+</button><span class="muted">Quantity</span></div>
+      <div class="total"><span>Demo total</span><strong id="total">₹13.50</strong></div>
+      <button class="primary" id="order">Create demo order</button>
+      <div class="status" id="result" role="status">Select a pack to see your order summary.</div>
+      <p class="muted" style="margin-top:10px">Prices shown are catalogue placeholders from your previous price list. Confirm supplier cost, availability, taxes and final selling price before launch.</p>
+    </aside>
+  </section>
+</main>
+<footer class="footer">Cheap UC Store · Independent storefront concept. Not affiliated with or endorsed by KRAFTON unless separately authorized.</footer>
+<script>
+const packs=[
+ {id:"p13",uc:13,mrp:15,price:13.50,label:"12 + 1 bonus UC"},
+ {id:"p26",uc:26,mrp:30,price:27,label:"25 + 1 bonus UC"},
+ {id:"p66",uc:66,mrp:75,price:67.50,label:"60 + 6 bonus UC"},
+ {id:"p360",uc:360,mrp:380,price:342,label:"360 UC"},
+ {id:"p720",uc:720,mrp:750,price:675,label:"720 UC"},
+ {id:"p1950",uc:1950,mrp:1900,price:1710,label:"1,950 UC"},
+ {id:"p4050",uc:4050,mrp:3800,price:3420,label:"4,050 UC"}
+];
+let selected=packs[3],quantity=1,mode="uid";
+const money=n=>"₹"+n.toLocaleString("en-IN",{minimumFractionDigits:2,maximumFractionDigits:2});
+const packsEl=document.querySelector("#packs");
+function renderPacks(){
+ packsEl.innerHTML="";
+ packs.forEach(p=>{
+  const b=document.createElement("button");b.type="button";b.className="pack"+(p.id===selected.id?" selected":"");
+  b.innerHTML=`<div class="uc">${p.uc.toLocaleString("en-IN")} UC</div><small>${p.label}</small><div class="price">${money(p.price)} <span class="mrp">${money(p.mrp)}</span></div>`;
+  b.addEventListener("click",()=>{selected=p;renderPacks();renderSummary()});packsEl.appendChild(b);
+ });
+}
+function renderSummary(){
+ document.querySelector("#selectedText").textContent=`${selected.uc.toLocaleString("en-IN")} UC · ${selected.label}`;
+ document.querySelector("#qty").textContent=quantity;
+ document.querySelector("#total").textContent=money(selected.price*quantity);
+}
+document.querySelector("#minus").onclick=()=>{quantity=Math.max(1,quantity-1);renderSummary()};
+document.querySelector("#plus").onclick=()=>{quantity=Math.min(20,quantity+1);renderSummary()};
+document.querySelectorAll(".mode").forEach(b=>b.onclick=()=>{
+ mode=b.dataset.mode;document.querySelectorAll(".mode").forEach(x=>x.classList.toggle("active",x===b));
+ document.querySelector("#uidWrap").style.display=mode==="uid"?"block":"none";
+});
+document.querySelector("#order").onclick=()=>{
+ const uid=document.querySelector("#uid").value.trim();
+ if(mode==="uid"&&!/^[0-9]{6,14}$/.test(uid)){document.querySelector("#result").textContent="Please enter a valid 6–14 digit player UID for this demo order.";return}
+ const orderId="DEMO-"+Date.now().toString(36).toUpperCase();
+ const payload={orderId,pack:selected.uc+" UC",quantity,total:money(selected.price*quantity),delivery:mode,uid:mode==="uid"?uid:"not collected in demo",ign:document.querySelector("#ign").value.trim()||"Not provided"};
+ document.querySelector("#result").textContent="Demo order created (not paid, not submitted, and no UC will be delivered).\n\n"+JSON.stringify(payload,null,2);
+};
+renderPacks();renderSummary();
+</script>
+</body></html>
